@@ -7,8 +7,6 @@
 
 
 import Foundation
-import NetworkModule
-
 
 // DI: закрываем протоколом
 protocol ServiceLocatorProtocol {

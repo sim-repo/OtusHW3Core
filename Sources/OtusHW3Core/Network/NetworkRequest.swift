@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import NetworkModule
 
 enum EntityEnum {
     case news,rickAndMorty

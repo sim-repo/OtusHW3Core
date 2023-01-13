@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import NetworkModule
-
 
 //DIP: сервисы закрываем протоколом
 protocol FetchDataProtocol {
