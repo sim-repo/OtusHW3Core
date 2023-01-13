@@ -18,7 +18,7 @@ public protocol FetchDataProtocol {
 
 
 //Сервис подкачки данных
-class FetchDataService: FetchDataProtocol {
+public class FetchDataService: FetchDataProtocol {
     
     private let serviceLocator: ServiceLocatorProtocol
     
@@ -28,7 +28,7 @@ class FetchDataService: FetchDataProtocol {
         self.serviceLocator = serviceLocator
     }
     
-    func loadData<T:EntityProtocol>(_ type: EntityEnum, with completionHandler: @escaping ([T]) -> Void) {
+    public func loadData<T:EntityProtocol>(_ type: EntityEnum, with completionHandler: @escaping ([T]) -> Void) {
         guard let cache:CacheService<T> = getCache() else { return }
         
         //store:
@@ -42,7 +42,7 @@ class FetchDataService: FetchDataProtocol {
     }
     
     
-    func fetchData<T:EntityProtocol>(_ type: EntityEnum, with completionHandler: @escaping ([T]) -> Void) {
+    public func fetchData<T:EntityProtocol>(_ type: EntityEnum, with completionHandler: @escaping ([T]) -> Void) {
         guard let cache:CacheService<T> = getCache() else { return }
         runNetworkRequest(cache, completionHandler)
     }
