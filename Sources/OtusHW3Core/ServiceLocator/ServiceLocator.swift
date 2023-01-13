@@ -9,12 +9,12 @@
 import Foundation
 
 // DI: закрываем протоколом
-protocol ServiceLocatorProtocol {
+public protocol ServiceLocatorProtocol {
     func getService<T>() -> T?
 }
 
 
-final class ServiceLocator: ServiceLocatorProtocol {
+public final class ServiceLocator: ServiceLocatorProtocol {
     
     private init(){}
     
@@ -26,12 +26,12 @@ final class ServiceLocator: ServiceLocatorProtocol {
         return (some is Any.Type) ? "\(some)" : "\(type(of: some))'"
     }
     
-    func addService<T>(service: T) {
+    public func addService<T>(service: T) {
         let key = typeName(some: T.self)
         services[key] = service
     }
     
-    func getService<T>() -> T? {
+    public func getService<T>() -> T? {
         let key = typeName(some: T.self)
         return services[key] as? T
     }
