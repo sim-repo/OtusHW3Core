@@ -12,6 +12,8 @@ import Foundation
 public final class CacheService<Entity>{
     private(set) var entities: [Entity] = []
 
+    public init(){}
+    
     var hasData: Bool {
         return !entities.isEmpty
     }
@@ -20,6 +22,5 @@ public final class CacheService<Entity>{
         guard let arr = entities else { return }
         self.entities.append(contentsOf: arr)
     }
-
 }
 

@@ -24,7 +24,7 @@ public class FetchDataService: FetchDataProtocol {
     
     private var nextPage = 1
     
-    init(serviceLocator: ServiceLocatorProtocol){
+    public init(serviceLocator: ServiceLocatorProtocol){
         self.serviceLocator = serviceLocator
     }
     
