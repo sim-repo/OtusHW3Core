@@ -8,7 +8,7 @@
 import Foundation
 
 //DIP: сервисы закрываем протоколом
-protocol FetchDataProtocol {
+public protocol FetchDataProtocol {
     // приоритет получения данны из кэша:
     func loadData<T:EntityProtocol>(_ type: EntityEnum, with completionHandler: @escaping ([T]) -> Void )
     // подгрузка данных с сервера

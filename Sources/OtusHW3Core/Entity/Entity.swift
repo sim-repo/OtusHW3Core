@@ -9,7 +9,7 @@ import Foundation
 
 
 //Создаем ограничитель для сущностей, используемые для дженериковых методов
-protocol EntityProtocol{}
+public protocol EntityProtocol{}
 
 extension Article: EntityProtocol {}
 

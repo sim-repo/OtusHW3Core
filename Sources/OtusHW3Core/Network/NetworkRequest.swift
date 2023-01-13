@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EntityEnum {
+public enum EntityEnum {
     case news,rickAndMorty
 }
 
